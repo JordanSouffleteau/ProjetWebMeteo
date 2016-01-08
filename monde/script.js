@@ -44,7 +44,7 @@ function getColor(d) {
 }
 
 // Je récupère les coords des pays du monde pour la map
-d3.json("pays.geojson", function(error, data) {
+d3.json("../pays.geojson", function(error, data) {
 	
 	if (error) alert(error);
 	
