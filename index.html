@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css">
+	<script>L_PREFER_CANVAS = true;</script>
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="menu.js"></script>
+    <script src="countries.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    
+    <div class="meny">
+    	<h2>Outils-web</h2>
+    	<ul>
+    		<li><a href="../../page-script-jquery.asp">scripts jQuery</a></li>
+    		<li><a href="../../page-script-jquery-menu.asp">menus jQuery</a></li>
+    		<li><a href="../../page-script-html-css.asp">scripts html-css</a></li>
+    		<li><a href="../../page-script-html-css-menu.asp">menus html-css</a></li>
+    		<li><a href="../../page-script-flash.asp">scripts flash</a></li>
+    		<li><a href="../../page-script-flash-menu.asp">menus flash</a></li>
+    		<br/><br/>
+    		<li><a href="../../page-generateur-CSS-bouton.asp">bouton CSS</a></li>
+    	</ul>
+    </div>
+	
+	<div class="meny-arrow"></div>
+	<div class="contents">
+		<div id="Titre">RepertoireDuTemps</div>
+    
+		<div id="map" style="width: 1000px; height: 800px"
+
+		
+	</div>
+	
+	
+	
+   	<script>
+	  var meny = Meny.create({
+		menuElement: document.querySelector( '.meny' ),
+		contentsElement: document.querySelector( '.contents' ),
+		// [optional] alignement du menu (top/right/bottom/left)
+		position: Meny.getQuery().p || 'left',
+		// [optional] largeur du menu (pour la position left ou right)
+		width: 260,
+		// [optional] distance de déclenchement du menu par rapport au menu
+		threshold: 40,
+		// [optional] utilisation des mouvement de la souris pour l'ouverture ou la fermeture
+		mouse: true,
+		// [optional] utilisation de l'approche
+		touch: true
+	  });
+	  
+	  if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+		var contents = document.querySelector( '.contents' );
+		contents.style.padding = '0px';
+		contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+	  }
+	</script>
+    <script src="script.js"></script>
+  </body>
+
+</html>
