@@ -228,7 +228,7 @@ d3.json("../pays.geojson", function(error, data) {
 		  var point = map.latLngToLayerPoint(new L.LatLng(y, x));
 		  this.stream.point(point.x, point.y);
 		}	
-	}, 3000);
+	}, 12000);
 
 geoJson = L.geoJson(data, {
 	style : style,

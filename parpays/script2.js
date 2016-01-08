@@ -37,7 +37,8 @@ var main_chart_svg = d3.select("#MaCarte")
 	.attr("id","SVG");
 		
 function changementSelect(sel){
-	d3.xml("./countries/maps/"+sel.value+"High ().svg", function(error, documentFragment) {
+	console.log(sel.value);
+	d3.xml("../countries/maps/"+sel.value+"High ().svg", function(error, documentFragment) {
 
 		d3.select("#carte").remove();
 		if (error) {console.log(error); return;}
