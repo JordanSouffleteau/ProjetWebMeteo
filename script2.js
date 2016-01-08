@@ -53,7 +53,12 @@ function changementSelect(sel){
 		for(var i = 0; i < pathList.length; i++){
 			pathList[i].onmouseover = function(){
 				info.update(jQuery(this).attr('title'));
+				displayTooltip(jQuery(this).attr('title'));
 			}
+			pathList[i].onmouseout = function(){
+				hideTooltip();
+			}
+			pathList[i].style.fill = getColor(30);
 		}
 		map.getPanes().overlayPane.appendChild(documentFragment.documentElement);
 		map.setView(new L.LatLng(lon, lat), 2);
@@ -98,7 +103,6 @@ LegendTemperature.onAdd = function (map) {
 
 LegendTemperature.addTo(map);
 
-	
 // Set du mouseover et out
 function onEachFeature(feature, layer) {
 	layer.on({
@@ -170,4 +174,41 @@ function correspondA(id){
 		if(c[1] === id)
 			return c[0];
 	}
+}
+// Évennement mouvement souri
+document.onmousemove = getMouseXY;
+
+// Applique à la tooltip la position de la souri
+//(dans le cas ou la tooltip est affichée)
+function getMouseXY(e) {
+  
+  tempX = e.clientX;
+  tempY = e.clientY;
+
+  // catch possible negative values in NS4
+  if (tempX < 0){tempX = 0}
+  if (tempY < 0){tempY = 0}  
+  
+  if(document.getElementById("tooltip") !== null){
+    document.getElementById("tooltip").style.top = tempY + 10 + "px";
+    document.getElementById("tooltip").style.left = tempX + 10 + "px";
+  }
+  
+  return true;
+}
+
+//Affiche la tooltip
+function displayTooltip(text){
+  var body = document.getElementsByTagName("body")[0];
+  
+  var tooltip = document.createElement("div");
+  tooltip.className = "tooltip";
+  tooltip.id = "tooltip";
+  tooltip.innerHTML = text;
+  body.appendChild(tooltip);
+}
+
+//Cache la tooltip
+function hideTooltip(){
+  remove("tooltip");
 }
