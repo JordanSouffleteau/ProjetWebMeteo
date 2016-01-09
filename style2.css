@@ -5,7 +5,7 @@ h1, p {
   margin: 0 auto;
   top:0px;
   height:700px;
-  width:1400px;
+  width:700px;
 }
 .region {
   fill: #888;
@@ -62,4 +62,8 @@ svg{
 }
 .land{
   fill:#888;
+}
+
+body{
+  background-color: white;
 }

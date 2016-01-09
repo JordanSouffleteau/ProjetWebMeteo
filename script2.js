@@ -2,14 +2,14 @@ var listPaysMonde = ["Afghanistan","AfriqueduSud","Aland","Albanie","Algérie","A
 var listCodePaysMonde = ["AFG","ZAF","ALA","ALB","DZA","DEU","AND","AGO","AIA","ATA","ATG","SAU","ARG","ARM","ABW","AUS","AUT","AZE","BHS","BHR","BGD","BRB","BLR","BEL","BLZ","BEN","BMU","BTN","BOL","BES","BIH","BWA","BVT","BRA","BRN","BGR","BFA","BDI","CYM","KHM","CMR","CAN","CPV","CAF","CHL","CHN","CXR","CYP","CCK","COL","COM","COG","COD","COK","KOR","PRK","CRI","CIV","HRV","CUB","CUW","DNK","DJI","DOM","DMA","EGY","SLV","ARE","ECU","ERI","ESP","EST","USA","ETH","FLK","FRO","FJI","FIN","FRA","GAB","GMB","GEO","SGS","GHA","GIB","GRC","GRD","GRL","GLP","GUM","GTM","GGY","GIN","GNB","GNQ","GUY","GUF","HTI","HMD","HND","HKG","HUN","IMN","UMI","VGB","VIR","IND","IDN","IRN","IRQ","IRL","ISL","ISR","ITA","JAM","JPN","JEY","JOR","KAZ","KEN","KGZ","KIR","KWT","LAO","LSO","LVA","LBN","LBR","LBY","LIE","LTU","LUX","MAC","MKD","MDG","MYS","MWI","MDV","MLI","MLT","MNP","MAR","MHL","MTQ","MUS","MRT","MYT","MEX","FSM","MDA","MCO","MNG","MNE","MSR","MOZ","MMR","NAM","NRU","NPL","NIC","NER","NGA","NIU","NFK","NOR","NCL","NZL","IOT","OMN","UGA","UZB","PAK","PLW","PSE","PAN","PNG","PRY","NLD","PER","PHL","PCN","POL","PYF","PRI","PRT","QAT","REU","ROU","GBR","RUS","RWA","ESH","BLM","KNA","SMR","MAF","SXM","SPM","VAT","VCT","SHN","LCA","SLB","WSM","ASM","STP","SEN","SRB","SYC","SLE","SGP","SVK","SVN","SOM","SDN","SSD","LKA","SWE","CHE","SUR","SJM","SWZ","SYR","TJK","TWN","TZA","TCD","CZE","ATF","THA","TLS","TGO","TKL","TON","TTO","TUN","TKM","TCA","TUR","TUV","UKR","URY","VUT","VEN","VNM","WLF","YEM","ZMB","ZWE"];
 var correspondance = [["AFG","AF"],["ZAF","ZA"],["ALA","AX"],["ALB","AL"],["DZA","DZ"],["DEU","DE"],["AND","AD"],["AGO","AO"],["AIA","AI"],["ATA","AQ"],["ATG","AG"],["SAU","SA"],["ARG","AR"],["ARM","AM"],["ABW","AW"],["AUS","AU"],["AUT","AT"],["AZE","AZ"],["BHS","BS"],["BHR","BH"],["BGD","BD"],["BRB","BB"],["BLR","BY"],["BEL","BE"],["BLZ","BZ"],["BEN","BJ"],["BMU","BM"],["BTN","BT"],["BOL","BO"],["BES","BQ"],["BIH","BA"],["BWA","BW"],["BVT","BV"],["BRA","BR"],["BRN","BN"],["BGR","BG"],["BFA","BF"],["BDI","BI"],["CYM","KY"],["KHM","KH"],["CMR","CM"],["CAN","CA"],["CPV","CV"],["CAF","CF"],["CHL","CL"],["CHN","CN"],["CXR","CX"],["CYP","CY"],["CCK","CC"],["COL","CO"],["COM","KM"],["COG","CG"],["COD","CD"],["COK","CK"],["KOR","KR"],["PRK","KP"],["CRI","CR"],["CIV","CI"],["HRV","HR"],["CUB","CU"],["CUW","CW"],["DNK","DK"],["DJI","DJ"],["DOM","DO"],["DMA","DM"],["EGY","EG"],["SLV","SV"],["ARE","AE"],["ECU","EC"],["ERI","ER"],["ESP","ES"],["EST","EE"],["USA","US"],["ETH","ET"],["FLK","FK"],["FRO","FO"],["FJI","FJ"],["FIN","FI"],["FRA","FR"],["GAB","GA"],["GMB","GM"],["GEO","GE"],["SGS","GS"],["GHA","GH"],["GIB","GI"],["GRC","GR"],["GRD","GD"],["GRL","GL"],["GLP","GP"],["GUM","GU"],["GTM","GT"],["GGY","GG"],["GIN","GN"],["GNB","GW"],["GNQ","GQ"],["GUY","GY"],["GUF","GF"],["HTI","HT"],["HMD","HM"],["HND","HN"],["HKG","HK"],["HUN","HU"],["IMN","IM"],["UMI","UM"],["VGB","VG"],["VIR","VI"],["IND","IN"],["IDN","ID"],["IRN","IR"],["IRQ","IQ"],["IRL","IE"],["ISL","IS"],["ISR","IL"],["ITA","IT"],["JAM","JM"],["JPN","JP"],["JEY","JE"],["JOR","JO"],["KAZ","KZ"],["KEN","KE"],["KGZ","KG"],["KIR","KI"],["KWT","KW"],["LAO","LA"],["LSO","LS"],["LVA","LV"],["LBN","LB"],["LBR","LR"],["LBY","LY"],["LIE","LI"],["LTU","LT"],["LUX","LU"],["MAC","MO"],["MKD","MK"],["MDG","MG"],["MYS","MY"],["MWI","MW"],["MDV","MV"],["MLI","ML"],["MLT","MT"],["MNP","MP"],["MAR","MA"],["MHL","MH"],["MTQ","MQ"],["MUS","MU"],["MRT","MR"],["MYT","YT"],["MEX","MX"],["FSM","FM"],["MDA","MD"],["MCO","MC"],["MNG","MN"],["MNE","ME"],["MSR","MS"],["MOZ","MZ"],["MMR","MM"],["NAM","NA"],["NRU","NR"],["NPL","NP"],["NIC","NI"],["NER","NE"],["NGA","NG"],["NIU","NU"],["NFK","NF"],["NOR","NO"],["NCL","NC"],["NZL","NZ"],["IOT","IO"],["OMN","OM"],["UGA","UG"],["UZB","UZ"],["PAK","PK"],["PLW","PW"],["PSE","PS"],["PAN","PA"],["PNG","PG"],["PRY","PY"],["NLD","NL"],["PER","PE"],["PHL","PH"],["PCN","PN"],["POL","PL"],["PYF","PF"],["PRI","PR"],["PRT","PT"],["QAT","QA"],["REU","RE"],["ROU","RO"],["GBR","GB"],["RUS","RU"],["RWA","RW"],["ESH","EH"],["BLM","BL"],["KNA","KN"],["SMR","SM"],["MAF","MF"],["SXM","SX"],["SPM","PM"],["VAT","VA"],["VCT","VC"],["SHN","SH"],["LCA","LC"],["SLB","SB"],["WSM","WS"],["ASM","AS"],["STP","ST"],["SEN","SN"],["SRB","RS"],["SYC","SC"],["SLE","SL"],["SGP","SG"],["SVK","SK"],["SVN","SI"],["SOM","SO"],["SDN","SD"],["SSD","SS"],["LKA","LK"],["SWE","SE"],["CHE","CH"],["SUR","SR"],["SJM","SJ"],["SWZ","SZ"],["SYR","SY"],["TJK","TJ"],["TWN","TW"],["TZA","TZ"],["TCD","TD"],["CZE","CZ"],["ATF","TF"],["THA","TH"],["TLS","TL"],["TGO","TG"],["TKL","TK"],["TON","TO"],["TTO","TT"],["TUN","TN"],["TKM","TM"],["TCA","TC"],["TUR","TR"],["TUV","TV"],["UKR","UA"],["URY","UY"],["VUT","VU"],["VEN","VE"],["VNM","VN"],["WLF","WF"],["YEM","YE"],["ZMB","ZM"],["ZWE","ZW"]];
 var listPaysAng = [["afghanistan"],["albania"],["algeria"],["andorra"],["angola"],["argentina"],["armenia"],["australia"],["austria"],["azerbaijan"],["bahrain"],["bangladesh"],["belarus"],["belgium"],["belize"],["bhutan"],["bolivia"],["botswana"],["brazil"],["bruneiDarussalam"],["bulgaria"],["burkinaFaso"],["burundi"],["cambodia"],["cameroon"],["canada"],["capeVerde"],["centralAfricanRepublic"],["chad"],["chile"],["china"],["colombia"],["congo"],["costaRica"],["croatia"],["cuba"],["cyprus"],["czechRepublic"],["denmark"],["djibouti"],["dominicanRepublic"],["ecuador"],["egypt"],["elSalvador"],["estonia"],["faroeIslands"],["finland"],["france2016"],["franceDepartments"],["france"],["georgia"],["germany"],["greece"],["guatemala"],["guinea"],["guyana"],["haiti"],["honduras"],["hongKong"],["hungary"],["iceland"],["india"],["indonesia"],["iran"],["iraq"],["ireland"],["israel"],["italy"],["jamaica"],["japan"],["kazakhstan"],["kenya"],["kosovo"],["kyrgyzstan"],["laos"],["latvia"],["liechtenstein"],["lithuania"],["luxembourg"],["macedonia"],["malaysia"],["mali"],["malta"],["mexico"],["moldova"],["mongolia"],["montenegro"],["myanmar"],["nepal"],["netherlands"],["newZealand"],["nicaragua"],["nigeria"],["norway"],["oman"],["pakistan"],["palestine"],["panama"],["paraguay"],["peru"],["philippines"],["poland"],["portugal"],["portugalRegions"],["puertoRico"],["qatar"],["romania"],["russia"],["rwanda"],["sanMarino"],["saudiArabia"],["serbia"],["serbiaNoKosovo"],["singapore"],["slovakia"],["slovenia"],["southAfrica"],["southKorea"],["spain"],["spainProvinces"],["sriLanka"],["suriname"],["sweden"],["switzerland"],["syria"],["taiwan"],["tajikistan"],["thailand"],["turkey"],["uganda"],["ukraine"],["unitedArabEmirates"],["unitedKingdom"],["uruguay"],["usa"],["venezuela"],["vietnam"],["yemen"]];
-
+var infos;
 var x = document.getElementById("selectPays");
 var attributes = {};
 
 var map = L.map('map', {
-	maxZoom: 4,
+	maxZoom: 2,
 	minZoom: 2
-}).setView([0, 0], 2);
+}).setView([0, 0], 3);
 
 /*
 map.dragging.disable();
@@ -35,6 +35,108 @@ var main_chart_svg = d3.select("#MaCarte")
 		"height":800
 	})
 	.attr("id","SVG");
+
+function getData(Reg){
+	Reg.onmouseout = function(){
+		hideTooltip();
+	}
+	d3.json("http://api.openweathermap.org/data/2.5/weather?q="+jQuery(Reg).attr('title') + "&APPID=bf920662e14bbed958faa4f372a4d167", function(error, meteo) {
+
+		var Pluie, Nuage, IdPays, NomPays, CodePays, IdCarac, Longitude, Latitude, Main, Description, IconIcon, Base, Temperature, Pressure, Humidity , Temp_min, Temp_max, Sea_level, Grnd_level, VitesseVent, VitesseDeg;
+		var dataPays = $.map(meteo, function(el) { return el });
+		for(var indice1 = 0; indice1 < Object.keys(dataPays).length; indice1++){
+			for(var indice2 = 0; indice2 < Object.keys(dataPays[indice1]).length; indice2++){
+				var attr = Object.keys(dataPays[indice1])[indice2];
+				switch(attr){
+					case "lon":
+						Reg.Longitude = dataPays[indice1].lon;
+						break;
+					case "lat":
+						Reg.Latitude = dataPays[indice1].lat;
+						break;
+					case "main":
+						Reg.Main = dataPays[indice1].main;
+						break;
+					case "description":
+						Reg.Description = dataPays[indice1].description;
+						break;
+					case "temp":
+						Reg.Temperature = Math.round((dataPays[indice1].temp-273.15)*100)/100; // Conversion Kelvin vers Celcius
+						break;
+					case "pressure":
+						Reg.Pressure = dataPays[indice1].pressure;
+						break;
+					case "humidity":
+						Reg.Humidity = dataPays[indice1].humidity;
+						break;
+					case "temp_min":
+						Reg.Temp_min = Math.round((dataPays[indice1].temp_min-273.15)*100)/100; // Conversion Kelvin vers Celcius
+						break;
+					case "temp_max":
+						Reg.Temp_max = Math.round((dataPays[indice1].temp_max-273.15)*100)/100; // Conversion Kelvin vers Celcius
+						break;
+					case "sea_level":
+						Reg.Sea_level = dataPays[indice1].sea_level;
+						break;
+					case "grnd_level":
+						Reg.Grnd_level = dataPays[indice1].grnd_level;
+						break;
+					case "speed":
+						Reg.VitesseVent = dataPays[indice1].speed;
+						break;
+					case "deg":
+						Reg.VitesseDeg = dataPays[indice1].deg;
+						break;
+					case "all":
+						Reg.Nuage = dataPays[indice1].all;
+						break;
+					case "rain":
+						Reg.Pluie = dataPays[indice1].rain;
+						break;
+					default:
+				}
+			}
+		}
+	
+		var text = "";
+		if(Reg.Latitude !== undefined)
+			text = text +'<br /> Latitude : ' + Reg.Latitude;
+		if(Reg.Longitude !== undefined)
+			text = text +'<br /> Longitude : ' + Reg.Longitude;
+		if(Reg.General !== undefined)
+			text = text +'<br /> Etat du ciel : ' + Reg.General;
+		if(Reg.temp !== undefined)
+			text = text +'<br /> Météo : ' + Reg.temp;
+		if(Reg.Temperature !== undefined)
+			text = text +'<br /> Température moyenne : '+ Reg.Temperature;
+		if(Reg.Temp_min !== undefined)
+			text = text +'<br /> Température minimale : ' + Reg.Temp_min;
+		if(Reg.Temp_max !== undefined)
+			text = text +'<br /> Température maximale : ' + Reg.Temp_max;
+		if(Reg.Pluie !== undefined)
+			text = text +'<br /> Pluie : ' + Reg.Pluie;
+		if(Reg.Nuage !== undefined)
+			text = text +'<br /> Nuage : ' + Reg.Nuage;
+		if(Reg.Sea_level !== undefined)
+			text = text +'<br /> Niveau de la mer : ' + Reg.Sea_level;
+		if(Reg.Grnd_level !== undefined)
+			text = text +'<br /> Niveau du sol : ' + Reg.Grnd_level;
+		if(Reg.VitesseVent !== undefined)
+			text = text +'<br /> Vitesse du vent : ' + Reg.VitesseVent + "m/s";
+		if(Reg.VitesseDeg !== undefined)
+			text = text +'<br /> Variation : ' + Reg.VitesseDeg;
+		if(Reg.Pressure !== undefined)
+			text = text +'<br /> Pression : ' + Reg.Pressure + "hpa";
+		if(Reg.Humidity !== undefined)
+			text = text +'<br /> Humidité : ' + Reg.Humidity + "%";	
+		Reg.text = text;
+		Reg.style.fill = getColor(Reg.Temperature);
+	});
+
+	Reg.onmouseover = function(){
+		displayTooltip(jQuery(this).attr('title') + '<br/>' + this.text);
+	}
+}
 		
 function changementSelect(sel){
 	d3.xml("./countries/maps/"+sel.value+"High ().svg", function(error, documentFragment) {
@@ -49,23 +151,15 @@ function changementSelect(sel){
 		var lon = (parseFloat(jQuery(svgNode2).attr('leftLongitude')) + parseFloat(jQuery(svgNode2).attr('rightLongitude')))/2;
 		var lat = (parseFloat(jQuery(svgNode2).attr('topLatitude')) + parseFloat(jQuery(svgNode2).attr('bottomLatitude')))/2;
 		
-		var pathList = documentFragment.getElementsByTagName("path");
-		for(var i = 0; i < pathList.length; i++){
-			pathList[i].onmouseover = function(){
-				info.update(jQuery(this).attr('title'));
-				displayTooltip(jQuery(this).attr('title'));
-			}
-			pathList[i].onmouseout = function(){
-				hideTooltip();
-			}
-			pathList[i].style.fill = getColor(30);
+		pathList = documentFragment.getElementsByTagName("path");
+		for (Reg of pathList){
+			getData(Reg);
 		}
 		map.getPanes().overlayPane.appendChild(documentFragment.documentElement);
 		map.setView(new L.LatLng(lon, lat), 2);
 	});	
 	
 }
-
 
 function getColor(d) {
 	return d > 30  ? '#B20000' :
