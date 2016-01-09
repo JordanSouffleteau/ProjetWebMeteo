@@ -43,14 +43,8 @@ function getColor(d) {
 					 '#FFFFFF' ;
 }
 
-// Je récupère les coords des pays du monde pour la map
-d3.json("../pays.geojson", function(error, data) {
-	
-	if (error) alert(error);
-	
-	// Je boucle sur tous les pays 
-	data.features.forEach(function(d) {
-		
+function getData(d){
+
 		// Je récupère leurs infos 
 		d3.json("http://api.openweathermap.org/data/2.5/weather?q="+d.properties.name+","+d.id+"&APPID=bf920662e14bbed958faa4f372a4d167", function(error, meteo) {
 			if (error) alert(error);
@@ -147,11 +141,19 @@ d3.json("../pays.geojson", function(error, data) {
 				text = text +'<br /> Humidité : ' + d.properties.Humidity + "%";	
 			
 			d.properties.Text = text;
-			
+
 		}); // Fin du pays// LES PROPRIETES DE MON PAYS	
+}
+// Je récupère les coords des pays du monde pour la map
+d3.json("../pays.geojson", function(error, data) {
+	
+	if (error) alert(error);
+	
+	// Je boucle sur tous les pays 
+	data.features.forEach(function(d) {
+		getData(d);
 	}); // Fin de tous les pays
 	setTimeout(function(){
-		
 		var transform = d3.geo.transform({point: projectPoint}),
 			path = d3.geo.path().projection(transform);
 			
@@ -206,7 +208,6 @@ d3.json("../pays.geojson", function(error, data) {
 					return '#FFFFFF';
 			}
 		})
-		
 		// Le reset
 		map.on("viewreset", reset);
 		reset();
@@ -228,7 +229,7 @@ d3.json("../pays.geojson", function(error, data) {
 		  var point = map.latLngToLayerPoint(new L.LatLng(y, x));
 		  this.stream.point(point.x, point.y);
 		}	
-	}, 12000);
+	}, 3000);
 
 geoJson = L.geoJson(data, {
 	style : style,
@@ -239,7 +240,6 @@ geoJson = L.geoJson(data, {
 L.geoJson(data, {style: style}).addTo(map);
 
 }); // Fin du json des pays
-
 
 // Légende des couleurs en fonction des températures
 var LegendTemperature = L.control({position: 'bottomright'});

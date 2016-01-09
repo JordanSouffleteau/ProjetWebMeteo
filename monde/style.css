@@ -1,9 +1,15 @@
 h1, p {
   text-align: center;
 }
+#informations{
+  width: 500px;
+  height: 100%;
+}
 #map {
+  position: absolute;
   margin: 0 auto;
-  top:0px;
+  top:20px;
+  right:20px;
 }
 .pays {
   fill: #888;

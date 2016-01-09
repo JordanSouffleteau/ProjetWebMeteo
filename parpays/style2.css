@@ -1,11 +1,21 @@
 h1, p {
   text-align: center;
 }
+#informations{
+  width: 500px;
+  height: 100%;
+}
+#contents{
+  width: 100%;
+
+}
 #map {
   margin: 0 auto;
-  top:0px;
+  position: absolute;
+  top:20px;
+  right:20px;
   height:700px;
-  width:700px;
+  width:800px;
 }
 .region {
   fill: #888;
@@ -57,8 +67,8 @@ svg{
 }
 
 #carte{
-	height:1500px;
-	width:1500px;
+	height:2000px;
+	width:2000px;
 }
 .land{
   fill:#888;

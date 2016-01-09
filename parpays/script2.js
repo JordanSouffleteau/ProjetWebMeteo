@@ -139,7 +139,6 @@ function getData(Reg){
 }
 		
 function changementSelect(sel){
-	console.log(sel.value);
 	d3.xml("../countries/maps/"+sel.value+"High ().svg", function(error, documentFragment) {
 
 		d3.select("#carte").remove();
