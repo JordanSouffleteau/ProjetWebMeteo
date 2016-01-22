@@ -1,11 +1,16 @@
 var listPaysMonde = ["Afghanistan","AfriqueduSud","Aland","Albanie","Algérie","Allemagne","Andorre","Angola","Anguilla","Antarctique","Antigua-et-Barbuda","Arabie saoudite","Argentine","Arménie","Aruba","Australie","Autriche","Azerbaïdjan","Bahamas","Bahreïn","Bangladesh","Barbade","Biélorussie","Belgique","Belize","Bénin","Bermudes","Bhoutan","Bolivie","Bonaire","Bosnie-Herzégovine","Botswana","ÎleBouvet","Brésil","Brunei","Bulgarie","BurkinaFaso","Burundi","ÎlesCaïmans","Cambodge","Cameroun","Canada","Cap-Vert","Républiquecentrafricaine","Chili","Chine","ÎleChristmas","Chypre","ÎlesCocos","Colombie","Comores","RépubliqueduCongo","RépubliquedémocratiqueduCongo","ÎlesCook","CoréeduSud","CoréeduNord","CostaRica","CôtedIvoire","Croatie","Cuba","Curaçao","Danemark","Djibouti","Républiquedominicaine","Dominique","Égypte","Salvador","Émiratsarabesunis","Équateur","Érythrée","Espagne","Estonie","États-Unis","Éthiopie","ÎlesMalouines","ÎlesFéroé","Fidji","Finlande","France","Gabon","Gambie","Géorgie","GéorgieduSud-et-lesÎlesSandwichduSud","Ghana","Gibraltar","Grèce","Grenade","Groenland","Guadeloupe","Guam","Guatemala","Guernesey","Guinée","Guinée-Bissau","Guinéeéquatoriale","Guyana","Guyane","Haïti","ÎlesHeard-et-MacDonald","Honduras","HongKong","Hongrie","ÎledeMan","ÎlesmineureséloignéesdesÉtats-Unis","ÎlesViergesbritanniques","ÎlesViergesdesÉtats-Unis","Inde","Indonésie","Iran","Irak","Irlande","Islande","Israël","Italie","Jamaïque","Japon","Jersey","Jordanie","Kazakhstan","Kenya","Kirghizistan","Kiribati","Koweït","Laos","Lesotho","Lettonie","Liban","Liberia","Libye","Liechtenstein","Lituanie","Luxembourg","Macao","Macédoine","Madagascar","Malaisie","Malawi","Maldives","Mali","Malte","ÎlesMariannesduNord","Maroc","Marshall","Martinique","Maurice","Mauritanie","Mayotte","Mexique","Micronésie","Moldavie","Monaco","Mongolie","Monténégro","Montserrat","Mozambique","Birmanie","Namibie","Nauru","Népal","Nicaragua","Niger","Nigeria","Niue","ÎleNorfolk","Norvège","Nouvelle-Calédonie","Nouvelle-Zélande","TerritoirebritanniquedelocéanIndien","Oman","Ouganda","Ouzbékistan","Pakistan","Palaos","AutoritéPalestinienne","Panama","Papouasie-Nouvelle-Guinée","Paraguay","Pays-Bas","Pérou","Philippines","ÎlesPitcairn","Pologne","Polynésiefrançaise","PortoRico","Portugal","Qatar","LaRéunion","Roumanie","Royaume-Uni","Russie","Rwanda","Saharaoccidental","Saint-Barthélemy","Saint-Christophe-et-Niévès","Saint-Marin","Saint-Martin","Saint-Pierre-et-Miquelon","Saint-Siège","Saint-Vincent-et-les-Grenadines","Sainte-Hélène","Sainte-Lucie","Salomon","Samoa","Samoaaméricaines","SaoTomé-et-Principe","Sénégal","Serbie","Seychelles","SierraLeone","Singapour","Slovaquie","Slovénie","Somalie","Soudan","SoudanduSud","SriLanka","Suède","Suisse","Suriname","SvalbardetÎleJanMayen","Swaziland","Syrie","Tadjikistan","Taïwan","Tanzanie","Tchad","Républiquetchèque","Terresaustralesetantarctiquesfrançaises","Thaïlande","Timororiental","Togo","Tokelau","Tonga","Trinité-et-Tobago","Tunisie","Turkménistan","ÎlesTurques-et-Caïques","Turquie","Tuvalu","Ukraine","Uruguay","Vanuatu","Venezuela","ViêtNam","Wallis-et-Futuna","Yémen","Zambie","Zimbabwe"];
 var listCodePaysMonde = ["AFG","ZAF","ALA","ALB","DZA","DEU","AND","AGO","AIA","ATA","ATG","SAU","ARG","ARM","ABW","AUS","AUT","AZE","BHS","BHR","BGD","BRB","BLR","BEL","BLZ","BEN","BMU","BTN","BOL","BES","BIH","BWA","BVT","BRA","BRN","BGR","BFA","BDI","CYM","KHM","CMR","CAN","CPV","CAF","CHL","CHN","CXR","CYP","CCK","COL","COM","COG","COD","COK","KOR","PRK","CRI","CIV","HRV","CUB","CUW","DNK","DJI","DOM","DMA","EGY","SLV","ARE","ECU","ERI","ESP","EST","USA","ETH","FLK","FRO","FJI","FIN","FRA","GAB","GMB","GEO","SGS","GHA","GIB","GRC","GRD","GRL","GLP","GUM","GTM","GGY","GIN","GNB","GNQ","GUY","GUF","HTI","HMD","HND","HKG","HUN","IMN","UMI","VGB","VIR","IND","IDN","IRN","IRQ","IRL","ISL","ISR","ITA","JAM","JPN","JEY","JOR","KAZ","KEN","KGZ","KIR","KWT","LAO","LSO","LVA","LBN","LBR","LBY","LIE","LTU","LUX","MAC","MKD","MDG","MYS","MWI","MDV","MLI","MLT","MNP","MAR","MHL","MTQ","MUS","MRT","MYT","MEX","FSM","MDA","MCO","MNG","MNE","MSR","MOZ","MMR","NAM","NRU","NPL","NIC","NER","NGA","NIU","NFK","NOR","NCL","NZL","IOT","OMN","UGA","UZB","PAK","PLW","PSE","PAN","PNG","PRY","NLD","PER","PHL","PCN","POL","PYF","PRI","PRT","QAT","REU","ROU","GBR","RUS","RWA","ESH","BLM","KNA","SMR","MAF","SXM","SPM","VAT","VCT","SHN","LCA","SLB","WSM","ASM","STP","SEN","SRB","SYC","SLE","SGP","SVK","SVN","SOM","SDN","SSD","LKA","SWE","CHE","SUR","SJM","SWZ","SYR","TJK","TWN","TZA","TCD","CZE","ATF","THA","TLS","TGO","TKL","TON","TTO","TUN","TKM","TCA","TUR","TUV","UKR","URY","VUT","VEN","VNM","WLF","YEM","ZMB","ZWE"];
 var correspondance = [["AFG","AF"],["ZAF","ZA"],["ALA","AX"],["ALB","AL"],["DZA","DZ"],["DEU","DE"],["AND","AD"],["AGO","AO"],["AIA","AI"],["ATA","AQ"],["ATG","AG"],["SAU","SA"],["ARG","AR"],["ARM","AM"],["ABW","AW"],["AUS","AU"],["AUT","AT"],["AZE","AZ"],["BHS","BS"],["BHR","BH"],["BGD","BD"],["BRB","BB"],["BLR","BY"],["BEL","BE"],["BLZ","BZ"],["BEN","BJ"],["BMU","BM"],["BTN","BT"],["BOL","BO"],["BES","BQ"],["BIH","BA"],["BWA","BW"],["BVT","BV"],["BRA","BR"],["BRN","BN"],["BGR","BG"],["BFA","BF"],["BDI","BI"],["CYM","KY"],["KHM","KH"],["CMR","CM"],["CAN","CA"],["CPV","CV"],["CAF","CF"],["CHL","CL"],["CHN","CN"],["CXR","CX"],["CYP","CY"],["CCK","CC"],["COL","CO"],["COM","KM"],["COG","CG"],["COD","CD"],["COK","CK"],["KOR","KR"],["PRK","KP"],["CRI","CR"],["CIV","CI"],["HRV","HR"],["CUB","CU"],["CUW","CW"],["DNK","DK"],["DJI","DJ"],["DOM","DO"],["DMA","DM"],["EGY","EG"],["SLV","SV"],["ARE","AE"],["ECU","EC"],["ERI","ER"],["ESP","ES"],["EST","EE"],["USA","US"],["ETH","ET"],["FLK","FK"],["FRO","FO"],["FJI","FJ"],["FIN","FI"],["FRA","FR"],["GAB","GA"],["GMB","GM"],["GEO","GE"],["SGS","GS"],["GHA","GH"],["GIB","GI"],["GRC","GR"],["GRD","GD"],["GRL","GL"],["GLP","GP"],["GUM","GU"],["GTM","GT"],["GGY","GG"],["GIN","GN"],["GNB","GW"],["GNQ","GQ"],["GUY","GY"],["GUF","GF"],["HTI","HT"],["HMD","HM"],["HND","HN"],["HKG","HK"],["HUN","HU"],["IMN","IM"],["UMI","UM"],["VGB","VG"],["VIR","VI"],["IND","IN"],["IDN","ID"],["IRN","IR"],["IRQ","IQ"],["IRL","IE"],["ISL","IS"],["ISR","IL"],["ITA","IT"],["JAM","JM"],["JPN","JP"],["JEY","JE"],["JOR","JO"],["KAZ","KZ"],["KEN","KE"],["KGZ","KG"],["KIR","KI"],["KWT","KW"],["LAO","LA"],["LSO","LS"],["LVA","LV"],["LBN","LB"],["LBR","LR"],["LBY","LY"],["LIE","LI"],["LTU","LT"],["LUX","LU"],["MAC","MO"],["MKD","MK"],["MDG","MG"],["MYS","MY"],["MWI","MW"],["MDV","MV"],["MLI","ML"],["MLT","MT"],["MNP","MP"],["MAR","MA"],["MHL","MH"],["MTQ","MQ"],["MUS","MU"],["MRT","MR"],["MYT","YT"],["MEX","MX"],["FSM","FM"],["MDA","MD"],["MCO","MC"],["MNG","MN"],["MNE","ME"],["MSR","MS"],["MOZ","MZ"],["MMR","MM"],["NAM","NA"],["NRU","NR"],["NPL","NP"],["NIC","NI"],["NER","NE"],["NGA","NG"],["NIU","NU"],["NFK","NF"],["NOR","NO"],["NCL","NC"],["NZL","NZ"],["IOT","IO"],["OMN","OM"],["UGA","UG"],["UZB","UZ"],["PAK","PK"],["PLW","PW"],["PSE","PS"],["PAN","PA"],["PNG","PG"],["PRY","PY"],["NLD","NL"],["PER","PE"],["PHL","PH"],["PCN","PN"],["POL","PL"],["PYF","PF"],["PRI","PR"],["PRT","PT"],["QAT","QA"],["REU","RE"],["ROU","RO"],["GBR","GB"],["RUS","RU"],["RWA","RW"],["ESH","EH"],["BLM","BL"],["KNA","KN"],["SMR","SM"],["MAF","MF"],["SXM","SX"],["SPM","PM"],["VAT","VA"],["VCT","VC"],["SHN","SH"],["LCA","LC"],["SLB","SB"],["WSM","WS"],["ASM","AS"],["STP","ST"],["SEN","SN"],["SRB","RS"],["SYC","SC"],["SLE","SL"],["SGP","SG"],["SVK","SK"],["SVN","SI"],["SOM","SO"],["SDN","SD"],["SSD","SS"],["LKA","LK"],["SWE","SE"],["CHE","CH"],["SUR","SR"],["SJM","SJ"],["SWZ","SZ"],["SYR","SY"],["TJK","TJ"],["TWN","TW"],["TZA","TZ"],["TCD","TD"],["CZE","CZ"],["ATF","TF"],["THA","TH"],["TLS","TL"],["TGO","TG"],["TKL","TK"],["TON","TO"],["TTO","TT"],["TUN","TN"],["TKM","TM"],["TCA","TC"],["TUR","TR"],["TUV","TV"],["UKR","UA"],["URY","UY"],["VUT","VU"],["VEN","VE"],["VNM","VN"],["WLF","WF"],["YEM","YE"],["ZMB","ZM"],["ZWE","ZW"]];
+var total;
+var actuel = 0;
 
 var map = L.map('map', {
 	maxZoom: 2,
 	minZoom: 2
 }).setView([30, 2.3], 2);
+
+
+
 //}).setView([46.3, 2.3], 6);
 
 // Disable drag and zoom handlers.
@@ -24,7 +29,6 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
   noWrap: true
 }).addTo(map);
 
-
 var svg = d3.select(map.getPanes().overlayPane).append("svg"),
   g = svg.append("g").attr("class", "leaflet-zoom-hide");
 
@@ -42,8 +46,8 @@ function getColor(d) {
 		   d < (-1)  ? '#0676FF' :
 					 '#FFFFFF' ;
 }
-
-function getData(d){
+var last = -1;
+function getData(d,data,$scope){
 
 		// Je récupère leurs infos 
 		d3.json("http://api.openweathermap.org/data/2.5/weather?q="+d.properties.name+","+d.id+"&APPID=bf920662e14bbed958faa4f372a4d167", function(error, meteo) {
@@ -116,13 +120,13 @@ function getData(d){
 			if(d.properties.General !== undefined)
 				text = text +'<br /> Etat du ciel : ' + d.properties.General;
 			if(d.properties.temp !== undefined)
-				text = text +'<br /> Météo : ' + d.properties.temp;
+				text = text +'<br /> Meteo : ' + d.properties.temp;
 			if(d.properties.Temperature !== undefined)
-				text = text +'<br /> Température moyenne : '+ d.properties.Temperature;
+				text = text +'<br /> Temperature moyenne : '+ d.properties.Temperature;
 			if(d.properties.Temp_min !== undefined)
-				text = text +'<br /> Température minimale : ' + d.properties.Temp_min;
+				text = text +'<br /> Temperature minimale : ' + d.properties.Temp_min;
 			if(d.properties.Temp_max !== undefined)
-				text = text +'<br /> Température maximale : ' + d.properties.Temp_max;
+				text = text +'<br /> Temperature maximale : ' + d.properties.Temp_max;
 			if(d.properties.Pluie !== undefined)
 				text = text +'<br /> Pluie : ' + d.properties.Pluie;
 			if(d.properties.Nuage !== undefined)
@@ -138,108 +142,134 @@ function getData(d){
 			if(d.properties.Pressure !== undefined)
 				text = text +'<br /> Pression : ' + d.properties.Pressure + "hpa";
 			if(d.properties.Humidity !== undefined)
-				text = text +'<br /> Humidité : ' + d.properties.Humidity + "%";	
+				text = text +'<br /> Humidite : ' + d.properties.Humidity + "%";	
 			
 			d.properties.Text = text;
+			actuel++;
 
+			$(function(){
+				var percentNow = Math.round((actuel*100/total));
+			  	if(last != percentNow){
+			  		var cercleLoading = document.getElementById("cercleLoading");
+			  		var percentLoading = document.getElementById("percentLoading");
+		  			cercleLoading.className = "c100 p" + percentNow;
+			  		percentLoading.innerHTML = percentNow+'%';
+			  	}
+			  	last = percentNow;
+			});
+			if(actuel == total){
+				setTimeout(afficherMap(data), 1000);
+			}
 		}); // Fin du pays// LES PROPRIETES DE MON PAYS	
 }
+
 // Je récupère les coords des pays du monde pour la map
-d3.json("../pays.geojson", function(error, data) {
-	
+d3.json("./countries/pays.geojson", function(error, data) {
+	document.getElementById("map").style.visibility = "collapse";
+	document.getElementById("cercleLoading").style.visibility = "visible";
+	document.getElementById("percentLoading").style.visibility = "visible";
 	if (error) alert(error);
-	
+
+	total = data.features.length;
 	// Je boucle sur tous les pays 
 	data.features.forEach(function(d) {
-		getData(d);
+		getData(d,data);
 	}); // Fin de tous les pays
-	setTimeout(function(){
-		var transform = d3.geo.transform({point: projectPoint}),
-			path = d3.geo.path().projection(transform);
-			
-		// Les features et les getters			
-		var feature = g.selectAll("path")
-			.data(data.features)
-			.enter().append("path")
-			.attr("d", path)
-			.classed({
-			"pays": true
-		})
-			.style("fill", function(ccc) {
-			tempe = ccc.properties.Temperature;
-			switch(true){
-				case (tempe >30) :
-					ccc.properties.Color = '#B20000';
-					return '#B20000';
-				case (tempe > 25) :
-					ccc.properties.Color = '#F20000';
-					return '#F20000';
-				case (tempe > 20) :
-					ccc.properties.Color = '#FF5500';
-					return '#FF5500';
-				case (tempe > 15) :
-					ccc.properties.Color = '#FD8700';
-					return '#FD8700';
-				case (tempe > 10) :
-					ccc.properties.Color = '#FDBC30';
-					return '#FDBC30';
-				case (tempe > 5) :
-					ccc.properties.Color = '#A5C8FC';
-					return '#A5C8FC';
-				case (tempe > 1) :
-					ccc.properties.Color = '#4ABAFB';
-					return '#4ABAFB';
-				case (tempe < (-15)):
-					ccc.properties.Color = '#00014B';
-					return '#00014B';
-				case (tempe < (-10)):
-					ccc.properties.Color = '#000985';
-					return '#000985';
-				case (tempe < (-5)):
-					ccc.properties.Color = '#2036DA';
-					return '#2036DA';
-				case (tempe < -1) :
-					ccc.properties.Color = '#0676FF';
-					return '#0676FF';
-				case (tempe > -1) :
-					ccc.properties.Color = '#0676FF';
-					return '#0676FF';
-				default :
-					return '#FFFFFF';
-			}
-		})
-		// Le reset
-		map.on("viewreset", reset);
-		reset();
-		
-		function reset() {
-			var bounds = path.bounds(data),
-			topLeft = bounds[0],
-			bottomRight = bounds[1];
 
-			svg.attr("width", bottomRight[0] - topLeft[0])
-				.attr("height", bottomRight[1] - topLeft[1])
-				.style("left", topLeft[0] + "px")
-				.style("top", topLeft[1] + "px");
-			g.attr("transform", "translate(" + -topLeft[0] + "," + -topLeft[1] + ")");
-		}
-		
-		// Use Leaflet to implement a D3 geometric transformation.
-		function projectPoint(x, y) {
-		  var point = map.latLngToLayerPoint(new L.LatLng(y, x));
-		  this.stream.point(point.x, point.y);
-		}	
-	}, 3000);
-
-geoJson = L.geoJson(data, {
-	style : style,
-	onEachFeature: onEachFeature
-}).addTo(map);
-
-
-L.geoJson(data, {style: style}).addTo(map);
 
 }); // Fin du json des pays
+
+
+function afficherMap(data){
+	document.getElementById("cercleLoading").style.visibility = "collapse";
+	document.getElementById("percentLoading").style.visibility = "collapse";
+	document.getElementById("map").style.visibility = "visible";
+
+	var transform = d3.geo.transform({point: projectPoint}),
+		path = d3.geo.path().projection(transform);
+		
+	// Les features et les getters			
+	var feature = g.selectAll("path")
+		.data(data.features)
+		.enter().append("path")
+		.attr("d", path)
+		.classed({
+		"pays": true
+	})
+		.style("fill", function(ccc) {
+		tempe = ccc.properties.Temperature;
+		switch(true){
+			case (tempe >30) :
+				ccc.properties.Color = '#B20000';
+				return '#B20000';
+			case (tempe > 25) :
+				ccc.properties.Color = '#F20000';
+				return '#F20000';
+			case (tempe > 20) :
+				ccc.properties.Color = '#FF5500';
+				return '#FF5500';
+			case (tempe > 15) :
+				ccc.properties.Color = '#FD8700';
+				return '#FD8700';
+			case (tempe > 10) :
+				ccc.properties.Color = '#FDBC30';
+				return '#FDBC30';
+			case (tempe > 5) :
+				ccc.properties.Color = '#A5C8FC';
+				return '#A5C8FC';
+			case (tempe > 1) :
+				ccc.properties.Color = '#4ABAFB';
+				return '#4ABAFB';
+			case (tempe < (-15)):
+				ccc.properties.Color = '#00014B';
+				return '#00014B';
+			case (tempe < (-10)):
+				ccc.properties.Color = '#000985';
+				return '#000985';
+			case (tempe < (-5)):
+				ccc.properties.Color = '#2036DA';
+				return '#2036DA';
+			case (tempe < -1) :
+				ccc.properties.Color = '#0676FF';
+				return '#0676FF';
+			case (tempe > -1) :
+				ccc.properties.Color = '#0676FF';
+				return '#0676FF';
+			default :
+				return '#FFFFFF';
+		}
+	})
+	// Le reset
+	map.on("viewreset", reset);
+	reset();
+	
+	function reset() {
+		var bounds = path.bounds(data),
+		topLeft = bounds[0],
+		bottomRight = bounds[1];
+
+		svg.attr("width", bottomRight[0] - topLeft[0])
+			.attr("height", bottomRight[1] - topLeft[1])
+			.style("left", topLeft[0] + "px")
+			.style("top", topLeft[1] + "px");
+		g.attr("transform", "translate(" + -topLeft[0] + "," + -topLeft[1] + ")");
+	}
+	
+	// Use Leaflet to implement a D3 geometric transformation.
+	function projectPoint(x, y) {
+	  var point = map.latLngToLayerPoint(new L.LatLng(y, x));
+	  this.stream.point(point.x, point.y);
+	}
+	
+	geoJson = L.geoJson(data, {
+		style : style,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+
+	L.geoJson(data, {style: style}).addTo(map);
+
+}
 
 // Légende des couleurs en fonction des températures
 var LegendTemperature = L.control({position: 'bottomright'});
@@ -301,7 +331,6 @@ function style(feature) {
 		color: "black",
 		fillOpacity: 0
 	};
-	this.infoBulle.style.color = "#777";
 }
 
 
