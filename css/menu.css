@@ -1,122 +1,146 @@
-
-* {
-	margin: 0;
-	padding: 0;
+@import url(http://fonts.googleapis.com/css?family=Capriola);
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  font-family: Capriola, Helvetica, sans-serif;
+}
+#cssmenu {
+  position: fixed;
+  top: 0;
+  margin-top: -10px;
+  width: 100%;
+  height: 59px;
+  padding-bottom: 4px;
+}
+#cssmenu.align-right {
+  float: right;
+}
+#cssmenu.align-right ul li {
+  float: right;
+  margin-right: 0;
+  margin-left: 4px;
+}
+#cssmenu.align-right ul li:first-child,
+#cssmenu.align-right ul li:first-child > a {
+  border-bottom-right-radius: 3px;
+}
+#cssmenu #bg-one,
+#cssmenu #bg-two,
+#cssmenu #bg-three,
+#cssmenu #bg-four {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
-html,
-body {
-	height: 100%;
-	overflow: hidden;
+
+#cssmenu #bg-one,{
+  height: 10px;
+  background: #0f71ba;
+}
+#cssmenu #bg-two{
+  height: 59px;
+  z-index: 2;
+  background: url('../images/bg.png');
+}
+#cssmenu #bg-three {
+  bottom: 4px;
+  height: 55px;
+  z-index: 3;
+  background: #222222;
+  background: -moz-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100%, #222222));
+  background: -webkit-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -o-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -ms-linear-gradient(top, #555555 0%, #222222 100%);
+  background: linear-gradient(to bottom, #555555 0%, #222222 100%);
+}
+#cssmenu #bg-four {
+  bottom: 4px;
+  height: 55px;
+  z-index: 4;
+  background: url('../images/bg.png');
+}
+#cssmenu ul {
+  height: 59px;
+}
+#cssmenu ul li {
+  float: left;
+  margin-right: 4px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  z-index: 5;
+}
+#cssmenu ul li a {
+  padding: 24px 30px 20px 30px;
+  margin-bottom: 4px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #eeeeee;
+  font-size: 15px;
+  text-decoration: none;
+}
+#cssmenu ul li:first-child,
+#cssmenu ul li:first-child > a {
+  border-bottom-left-radius: 3px;
+}
+#cssmenu ul li:hover,
+#cssmenu ul li.active {
+  background: #0f71ba;
+  background: -moz-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3fa4f0), color-stop(100%, #0f71ba));
+  background: -webkit-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -o-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -ms-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: linear-gradient(to bottom, #3fa4f0 0%, #0f71ba 100%);
+}
+#cssmenu ul li a:hover,
+#cssmenu ul li.active > a {
+  background: url('../images/bg.png');
+  color: #ffffff;
 }
 
-body {
-	font-family: 'Lato', Helvetica, sans-serif;
-	font-size: 16px;
-	color: #222;
-	/* à supprimer*/
-	/*background: url(./images/FE.jpg) no-repeat;*/
-	background-size: cover; 
-	background-color: rgb(219,219,219);
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	/* -------- */
-	}
-
-a {
-	color: #eee; /* ########################## COULEUR MENU ######################*/
-	text-decoration: none;
-
-	-webkit-transition: 0.15s color ease;
-	   -moz-transition: 0.15s color ease;
-	    -ms-transition: 0.15s color ease;
-	     -o-transition: 0.15s color ease;
-	        transition: 0.15s color ease;
-}
-	a:hover {
-		color: red; /* ########################## COULEUR MENU SURVOL ######################*/
-	}
-
-h1,
-h2 {
-	font-size: 24px;
+#cssmenu li {
+	width : 24.5%;
 }
 
-.meny {
-	display: none;
-	padding: 20px;
-	overflow: auto;
-	color: red; /* ########################## COULEUR TITRE MENU ######################*/
-
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
+#contents{
+  overflow-y: auto;
 }
-	.meny ul {
-		margin-top: 5px;
-	}
-		.meny ul li {
-			display: inline-block;
-			width: 250px;
-			list-style: none;
-			font-size: 20px;
-			padding: 3px 10px;
-		}
-			.meny ul li:before {
-				content: '-';
-				margin-right: 5px;
-				color: rgba( 255, 255, 255, 0.2 );
-			}
 
-/**
- * Hint graphic that appears while menu is inactive
- */
-.meny-arrow {
-	position: absolute;
-	z-index: 10;
-	border: 10px solid transparent;
-
-	-webkit-transition: opacity 0.4s ease 0.4s;
-	   -moz-transition: opacity 0.4s ease 0.4s;
-	    -ms-transition: opacity 0.4s ease 0.4s;
-	     -o-transition: opacity 0.4s ease 0.4s;
-	        transition: opacity 0.4s ease 0.4s;
+#Banner{
+  background: url(../images/Banner.png);
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  margin-top: 50px;
 }
-	.meny-left .meny-arrow {
-		left: 14px;
-		top: 50%;
-		margin-top: -16px;
-		border-left: 16px solid #333;
-	}
-	.meny-right .meny-arrow {
-		right: 14px;
-		top: 50%;
-		margin-top: -16px;
-		border-right: 16px solid #333;
-	}
-	.meny-top .meny-arrow {
-		left: 50%;
-		top: 14px;
-		margin-left: -16px;
-		border-top: 16px solid #333;
-	}
-	.meny-bottom .meny-arrow {
-		left: 50%;
-		bottom: 14px;
-		margin-left: -16px;
-		border-bottom: 16px solid #333;
-	}
-	.meny-active .meny-arrow {
-		opacity: 0;
+.bloc-principal {
+  min-height: calc(100vh - 40px)
+}
 
-		-webkit-transition: opacity 0.2s ease;
-		   -moz-transition: opacity 0.2s ease;
-		    -ms-transition: opacity 0.2s ease;
-		     -o-transition: opacity 0.2s ease;
-		        transition: opacity 0.2s ease;
-	}
-
-/**
- * Main contents area
- */
+body{
+  background: transparent linear-gradient(to bottom, #E0E0E0 0%, #E0E0E0 100%) repeat scroll 0% 0%;
+    /*background: rgb(226,226,226);*/
+  height: 100%;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 16px;
+  color: #222;
+  /* à supprimer*/
+  /*background: url(./images/FE.jpg) no-repeat;*/
+  background-size: cover; 
+  background-color: rgb(219,219,219);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  }

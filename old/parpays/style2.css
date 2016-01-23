@@ -1,0 +1,51 @@
+h1, p {
+  text-align: center;
+}
+
+#contentsPays{
+  width: 100%;
+  position: relative;
+}
+#mapPays {
+  position: relative;
+  top:10px;
+  margin-left:43%;
+  height:800px;
+  width:800px;
+  border: 4px solid #0f71ba;
+  padding: 20px;
+}
+
+.tooltip {
+  position:absolute;
+  background: #f0f0f0;
+  color:black;
+  padding:10px;
+}
+
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+svg{
+	position :absolute;
+	top:0px;
+	left:100px;
+}
+
+#carte{
+	height:2000px;
+	width:2000px;
+}
+.land{
+  fill:#888;
+  opacity: 0.6;
+}

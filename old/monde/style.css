@@ -1,0 +1,147 @@
+h1, p {
+  text-align: center;
+}
+#informations{
+  width: 500px;
+  height: 100%;
+}
+#map {
+  position: relative;
+  margin: 0 auto;
+  top:20px;
+  right:20px;
+  /*background-color: transparent;
+  /*opacity: 0.5;*/
+    /*border-radius: 25px;*/
+    border: 4px solid #0f71ba;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+
+.leaflet-control-container{
+  opacity: 1;
+}
+
+.pays {
+  fill: #888;
+  stroke: #444;
+  stroke-width: 1px;
+  opacity: 0.5;
+}
+
+.pays:hover {
+  opacity: 1;
+}
+
+.tooltip {
+  position:absolute;
+  background: #f0f0f0;
+  color:black;
+  padding:10px;
+}
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+}
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+#page{
+  position: relative;
+  top:40%;
+  left:48%;
+}
+
+#cercleLoading{
+  position: relative;
+  top:40%;
+  left: 48%;
+
+}
+
+#TitreMapMonde,
+#TitreMapPays{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  font-size: 70px;         /* taille de la police */
+  color: white;          /* Couleur de la police */
+  text-decoration: none;       /* Enlèvement du soulignement sur les liens */
+  text-shadow: 0 -2px 0 #222222;   /* Ombre portée qui donne du volume : effet letterpress */
+  margin-top: 200px;
+}
+
+#separationPays,
+#separationMonde {
+  background: url(../images/separation.png) no-repeat;
+  width: 100%;
+  height: 400px;
+}
+
+#selectPays{
+  width: 30%;
+  height: 60px;
+  font-size: 23px;
+  text-align: center;
+  vertical-align: center;
+  margin-top: 50px;
+  display: inline-block;
+
+}
+
+#Info{
+  width: 100%;
+  text-align: center;
+}
+
+#textInfo{
+  text-align: center;
+  display: inline-block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 75%;
+  height: 200px;
+  border: 4px solid #0f71ba;
+  background-color: #045dc3;
+  color: white;
+  font-size: 17px;
+}
+
+#Pays{
+  text-align: center;
+}
+
+#Footer{
+  width: 100%;
+  text-align: center;
+}
+
+#textFooter{
+  text-align: center;
+  display: inline-block;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  width: 95%;
+  height: 100px;
+  border: 4px solid #0f71ba;
+  background-color: #045dc3;
+  color: white;
+  font-size: 14px;
+}
