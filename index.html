@@ -34,6 +34,10 @@
 		</div>
 
 		<main class="contenu">
+			<div id="errorNotif" class="alert-box error"><span>error: </span>Write your error message here.</div>
+			<div class="alert-box success"><span>success: </span>Write your success message here.</div>
+			<div class="alert-box warning"><span>warning: </span>Write your warning message here.</div>
+			<div class="alert-box notice"><span>notice: </span>Write your notice message here.</div>
 			<div id="Info">
 				<div id="textInfo">
 					<p>Bonjour et Bienvenu sur World Weather</p>
@@ -45,8 +49,9 @@
 			<div id="Monde">
 				<div class="contents">
 					<div id="separationMonde">
-			  			<div id="TitreMapMonde">Meteo du monde</div>
+			  			<div id="TitreMapMonde">Météo du monde</div>
 			  		</div>
+			  		<p> Cliquez sur un pays pour obtenir plus d'information</p>
 			      	<div id="informations"></div>
 				    <div id="cercleLoading" class="c100 p25">
 				        <span id="percentLoading">25%</span>
@@ -65,6 +70,9 @@
 				</div>
 				<div class="contentsPays">
 					<select id="selectPays" onchange="changementSelect(this);"></select>
+
+					<div id="graphArchive">
+					</div>
 					<div id="mapPays" ></div>
 				</div>
 			</div>
@@ -83,4 +91,5 @@
   </body>
 	<script src="./js/script.js"></script>
 	<script src="./js/script2.js"></script>
+	<script src="./js/modernizr.custom.js"></script>
 </html>

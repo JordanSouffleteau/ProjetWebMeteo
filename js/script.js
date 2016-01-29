@@ -296,8 +296,38 @@ function onEachFeature(feature, layer) {
 	layer.on({
 		mouseover: highlightFeature,
 		mouseout: resetHighlight,
+		click: clickFeature,
 	});
 }
+// Affiche les informations du pays
+function clickFeature(e) {
+	var layer = e.target;
+	var elem = $("#selectPays");
+
+	var exists = false;
+	$('#selectPays option').each(function(){
+	    if (this.value == layer.feature.properties.name) {
+	        exists = true;
+	        return false;
+	    }
+	});
+
+	if(exists){
+		elem.val(layer.feature.properties.name);
+		elem.change();
+		window.location.href = "#Pays";
+	}
+
+	else{
+		document.getElementById("errorNotif").innerHTML = "Les donnees ne sont pas accessible depuis le click. Veuillez consulter la selectBox";
+		document.getElementById("errorNotif").style.visibility = "visible";
+		setTimeout(function(){
+			document.getElementById("errorNotif").style.visibility = "collapse";
+		},2000);
+	}
+}
+
+var info = L.control();
 
 // Affiche les informations du pays
 function highlightFeature(e) {
@@ -334,7 +364,6 @@ function style(feature) {
 }
 
 
-var info = L.control();
 
 info.onAdd = function (map) {
     this.infoBulle = L.DomUtil.create('div', 'info');

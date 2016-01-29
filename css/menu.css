@@ -11,6 +11,7 @@
   display: block;
   position: relative;
   font-family: Capriola, Helvetica, sans-serif;
+  z-index: 9999;
 }
 #cssmenu {
   position: fixed;

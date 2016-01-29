@@ -5,6 +5,7 @@ var listCodePaysMondeAng = [["Afghanistan","AF"],["Albania","AL"],["Algeria","DZ
 var listPaysAng = [["afghanistan"],["albania"],["algeria"],["andorra"],["angola"],["argentina"],["armenia"],["australia"],["austria"],["azerbaijan"],["bahrain"],["bangladesh"],["belarus"],["belgium"],["belize"],["bhutan"],["bolivia"],["botswana"],["brazil"],["bruneiDarussalam"],["bulgaria"],["burkinaFaso"],["burundi"],["cambodia"],["cameroon"],["canada"],["capeVerde"],["centralAfricanRepublic"],["chad"],["chile"],["china"],["colombia"],["congo"],["costaRica"],["croatia"],["cuba"],["cyprus"],["czechRepublic"],["denmark"],["djibouti"],["dominicanRepublic"],["ecuador"],["egypt"],["elSalvador"],["estonia"],["faroeIslands"],["finland"],["france2016"],["franceDepartments"],["france"],["georgia"],["germany"],["greece"],["guatemala"],["guinea"],["guyana"],["haiti"],["honduras"],["hongKong"],["hungary"],["iceland"],["india"],["indonesia"],["iran"],["iraq"],["ireland"],["israel"],["italy"],["jamaica"],["japan"],["kazakhstan"],["kenya"],["kosovo"],["kyrgyzstan"],["laos"],["latvia"],["liechtenstein"],["lithuania"],["luxembourg"],["macedonia"],["malaysia"],["mali"],["malta"],["mexico"],["moldova"],["mongolia"],["montenegro"],["myanmar"],["nepal"],["netherlands"],["newZealand"],["nicaragua"],["nigeria"],["norway"],["oman"],["pakistan"],["palestine"],["panama"],["paraguay"],["peru"],["philippines"],["poland"],["portugal"],["portugalRegions"],["puertoRico"],["qatar"],["romania"],["russia"],["rwanda"],["sanMarino"],["saudiArabia"],["serbia"],["serbiaNoKosovo"],["singapore"],["slovakia"],["slovenia"],["southAfrica"],["southKorea"],["spain"],["spainProvinces"],["sriLanka"],["suriname"],["sweden"],["switzerland"],["syria"],["taiwan"],["tajikistan"],["thailand"],["turkey"],["uganda"],["ukraine"],["unitedArabEmirates"],["unitedKingdom"],["uruguay"],["usa"],["venezuela"],["vietnam"],["yemen"]];
 var infos;
 var x = document.getElementById("selectPays");
+var valTemp = [];
 
 var mapPays = L.map('mapPays', {
 	maxZoom: 2,
@@ -24,7 +25,7 @@ map.keyboard.disable();
 		
 listPaysAng.forEach(function(d){
 	var option = document.createElement("option");
-	option.text = d;
+	option.text = d[0].charAt(0).toUpperCase() + d[0].substring(1);
 	x.add(option);
 });
   
@@ -152,9 +153,11 @@ function getCodePays(Reg){
 	return null;
 }		
 
+var svgArchive;
 function changementSelect(sel){
 	d3.xml("./countries/maps/"+sel.value+"High ().svg", function(error, documentFragment) {
 		d3.select("#carte").remove();
+		//d3.select("#Graph").remove();
 
 		if (error) {console.log(error); return;}
 				
@@ -178,6 +181,7 @@ function changementSelect(sel){
 		mapPays.setView([0, 0], 2);
 
 		var box = $("#coordG")[0].getBBox();
+		console.log(box);
 		var centerPoint = new Object();
 		centerPoint.x = box.x + box.width / 2;
 		centerPoint.y = box.y + box.height/ 2;
@@ -197,8 +201,197 @@ function changementSelect(sel){
 		
 		//mapPays.getPanes().overlayPane.appendChild(documentFragment.documentElement);
 	});	
-	
+
+
+	var jourTemp = new Object();
+	var codeP = getCodePays(sel.value);
+	d3.xml("http://api.openweathermap.org/data/2.5/forecast/daily?q="+sel.value+"," + codeP + "&mode=xml&units=metric&cnt=7&appid=bf920662e14bbed958faa4f372a4d167", function(error, meteo) {
+		valTemp = [];
+		var racine = meteo.documentElement;
+		for (var i = 0; i < racine.childNodes.length; i++) {
+			var child = racine.childNodes[i];
+			for (var j = 0; j < child.childNodes.length; j++) {
+				var child2 = child.childNodes[j];
+				if(child2.nodeName == "time"){
+					for (var k = 0; k < child2.childNodes.length; k++) {
+						jourTemp.Day = child2.getAttribute("day");
+						var child3 = child2.childNodes[k];
+						if(child3.nodeName == "temperature")
+							jourTemp.Temperature = child3.getAttribute("day");
+
+
+						/*
+						var name, country,population,dt,temp,pressure,humidity,weather,speed,deg,clouds,snow,rain;
+
+			          	switch(child3.nodeName){
+				            case "name":
+				              jourTemp.Name = child3.getAttribute("name");
+				              break;
+				            case "country":
+				              jourTemp.Country = child3.getAttribute("country");
+				              break;
+				            case "population":
+				              jourTemp.Population = child3.getAttribute("population");
+				              break;
+				            case "dt":
+				              jourTemp.Dt = child3.getAttribute("dt");
+				              break;
+				            case "temperature":
+				              jourTemp.Temperature = Math.round((child3.getAttribute("temperature")-273.15)*100)/100; // Conversion Kelvin vers Celcius
+				              break;
+				            case "pressure":
+				              jourTemp.Pressure = child3.getAttribute("pressure");
+				              break;
+				            case "humidity":
+				              jourTemp.Humidity = child3.getAttribute("humidity");
+				              break;
+				            case "weather":
+				              jourTemp.Temps = child3.getAttribute("weather").description; // Conversion Kelvin vers Celcius
+				              break;
+				            case "speed":
+				              jourTemp.Vitesse = child3.getAttribute("speed"); // Conversion Kelvin vers Celcius
+				              break;
+				            case "deg":
+				              jourTemp.Deg = child3.getAttribute("deg");
+				              break;
+				            case "clouds":
+				              jourTemp.Nuage = child3.getAttribute("clouds");
+				              break;
+				            case "snow":
+				              jourTemp.Neige = child3.getAttribute("snow");
+				              break;
+				            case "rain":
+				              jourTemp.Pluie = child3.getAttribute("rain");
+				              break;
+				            default:
+				        }*/
+					}
+
+
+					/*var text = "";
+					if(jourTemp.Name !== undefined)
+					text = text +'<br /> Name : ' + jourTemp.Name;
+					if(jourTemp.Country !== undefined)
+					text = text +'<br /> Pays : ' + jourTemp.Country;
+					if(jourTemp.Population !== undefined)
+					text = text +'<br /> Population : ' + jourTemp.Population;
+					if(jourTemp.Dt !== undefined)
+					text = text +'<br /> Dt : ' + jourTemp.Dt;
+					if(jourTemp.Temperature !== undefined)
+					text = text +'<br /> Temperature moyenne : '+ jourTemp.Temperature;
+					if(jourTemp.Pressure !== undefined)
+					text = text +'<br /> Pression : ' + jourTemp.Pressure;
+					if(jourTemp.Humidity !== undefined)
+					text = text +'<br /> Humidite : ' + jourTemp.Humidity;
+					if(jourTemp.Pluie !== undefined)
+					text = text +'<br /> Pluie : ' + jourTemp.Pluie;
+					if(jourTemp.Nuage !== undefined)
+					text = text +'<br /> Nuage : ' + jourTemp.Nuage;
+					if(jourTemp.Temps !== undefined)
+					text = text +'<br /> Temps : ' + jourTemp.Temps;
+					if(jourTemp.Deg !== undefined)
+					text = text +'<br /> Deg : ' + jourTemp.Deg;
+					if(jourTemp.Neige !== undefined)
+					text = text +'<br /> Neige : ' + jourTemp.Neige;
+					*/
+
+					var val = new Object();
+					val[0,0] = jourTemp.Day;
+					val[0,1] = jourTemp.Temperature;
+					valTemp.push(val);
+
+					
+				}
+	        }
+	    }
+
+
+		var margin = {top: 20, right: 20, bottom: 30, left: 50},
+		    width = 600 - margin.left - margin.right,
+		    height = 800 - margin.top - margin.bottom;
+
+		var formatDate = d3.time.format("%Y-%m-%d");
+
+		var x = d3.time.scale()
+		    .range([0, width]);
+
+		var y = d3.scale.linear()
+		    .range([height, 0]);
+
+		var xAxis = d3.svg.axis()
+		    .scale(x)
+	   		.tickFormat(d3.time.format('%d/%m'))
+		    .orient("bottom");
+
+		var yAxis = d3.svg.axis()
+		    .scale(y)
+		    .orient("left");
+
+		var line = d3.svg.line()
+		    .x(function(d) {return x(formatDate.parse(d[0,0])); })
+		    .y(function(d) {return y(d[0,1]); });
+
+		var X = $("#xAx");
+		var Y = $("#yAx");
+		var C = $("#courbe");
+
+		X.remove();
+		Y.remove();
+		C.remove();
+
+		if(!$("#Graph").length){
+			svgArchive = d3.select("#graphArchive").append("svg")
+				.attr("id", "Graph")
+			    .attr("width", width + margin.left + margin.right)
+			    .attr("height", height + margin.top + margin.bottom)
+			  	.append("g")
+			    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+		}
+
+		console.log(valTemp);
+		y.domain(d3.extent(valTemp, function(d) {
+			return d[0,1]; 
+		}));
+
+		x.domain(d3.extent(valTemp, function(d) { 
+			return formatDate.parse(d[0,0]); 
+		}));
+
+
+		svgArchive.append("g")
+		  .attr("class", "x axis")
+		  .attr("id", "xAx")
+		  .attr("transform", "translate(0," + height + ")")
+		  .call(xAxis);
+
+		svgArchive.append("g")
+		  .attr("class", "y axis")
+		  .attr("id", "yAx")
+		  .call(yAxis)
+			  .append("text")
+		  .attr("transform", "rotate(-90)")
+		  .attr("y", 6)
+		  .attr("dy", ".71em")
+		  .style("text-anchor", "end")
+		  .text("Temperature (°C)");
+
+
+		svgArchive.append("path")
+		  .datum(valTemp)
+		  .attr("id", "courbe")
+		  .attr("class", "line")
+		  .attr("d", line);	
+	    });
+
+
+
+
+	function type(d) {
+		return d;
+	}
+
 }
+
 
 function getColor(d) {
 	return d > 30  ? '#B20000' :
