@@ -307,8 +307,8 @@ function changementSelect(sel){
 
 
 		var margin = {top: 20, right: 20, bottom: 30, left: 50},
-		    width = 600 - margin.left - margin.right,
-		    height = 800 - margin.top - margin.bottom;
+		    width = 650 - margin.left - margin.right,
+		    height = 750 - margin.top - margin.bottom;
 
 		var formatDate = d3.time.format("%Y-%m-%d");
 
@@ -316,7 +316,7 @@ function changementSelect(sel){
 		    .range([0, width]);
 
 		var y = d3.scale.linear()
-		    .range([height, 0]);
+            .range([height, 0]);
 
 		var xAxis = d3.svg.axis()
 		    .scale(x)
@@ -331,13 +331,19 @@ function changementSelect(sel){
 		    .x(function(d) {return x(formatDate.parse(d[0,0])); })
 		    .y(function(d) {return y(d[0,1]); });
 
+		var div = d3.select("body").append("div")	
+    		.attr("class", "tooltip2")				
+    		.style("opacity", 0);
+
 		var X = $("#xAx");
 		var Y = $("#yAx");
 		var C = $("#courbe");
+		var P = $("circle");
 
 		X.remove();
 		Y.remove();
 		C.remove();
+		P.remove();
 
 		if(!$("#Graph").length){
 			svgArchive = d3.select("#graphArchive").append("svg")
@@ -370,10 +376,30 @@ function changementSelect(sel){
 		  .call(yAxis)
 			  .append("text")
 		  .attr("transform", "rotate(-90)")
-		  .attr("y", 6)
+		  .attr("y", 9)
 		  .attr("dy", ".71em")
 		  .style("text-anchor", "end")
-		  .text("Temperature (°C)");
+		  .html("Temperature (&deg;C)");
+
+    	svgArchive.selectAll("dot")
+	        .data(valTemp)
+	      	.enter().append("circle")
+	        .attr("r", 7)
+	        .attr("cx", function(d) { return x(formatDate.parse(d[0,0])); })
+	        .attr("cy", function(d) { return y(d[0,1]); })
+	        .on("mouseover", function(d) {		
+            div.transition()		
+                .duration(500)		
+                .style("opacity", .9);		
+            div.html(convertDate(d[0,0]) + "<br/><b>"  + d[0,1] + "&deg;C</b>")	
+                .style("left", (d3.event.pageX + 20) + "px")		
+                .style("top", (d3.event.pageY - 40) + "px");	
+            })					
+	        .on("mouseout", function(d) {		
+	            div.transition()		
+	                .duration(500)		
+	                .style("opacity", 0);	
+	        });	
 
 
 		svgArchive.append("path")
@@ -519,4 +545,10 @@ function displayTooltip(text){
 //Cache la tooltip
 function hideTooltip(){
   remove("tooltip");
+}
+
+function convertDate(inputFormat) {
+  function pad(s) { return (s < 10) ? '0' + s : s; }
+  var d = new Date(inputFormat);
+  return [pad(d.getDate()), pad(d.getMonth()+1), d.getFullYear()].join('/');
 }
